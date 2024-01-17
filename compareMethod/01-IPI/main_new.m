@@ -3,6 +3,8 @@
 % 删除非必要功能
 clc;
 close all;
+tic
+%strDir  strDir1可以修改
 strDir = 'images/';
 strDir1 = 'results/';
 files = dir([strDir '*.jpg']); % 获取文件夹中所有jpg文件
@@ -10,6 +12,7 @@ opt.dw = 50;
 opt.dh = 50;
 opt.x_step = 10;
 opt.y_step = 10;
+
 for i=1:length(files)
     fprintf('%d/%d: %s\n', length(files), i, files(i).name);
     I = imread([strDir files(i).name]);
@@ -24,5 +27,7 @@ for i=1:length(files)
     imwrite(A, [strDir1 'A/' files(i).name]);
     figure,imshow(A)
 end
-
+t=toc;
+avgTime=t/length(files);
+disp(avgTime)
 close all
