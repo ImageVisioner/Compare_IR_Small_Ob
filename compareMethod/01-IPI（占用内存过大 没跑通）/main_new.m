@@ -5,9 +5,9 @@ clc;
 close all;
 tic
 %strDir  strDir1可以修改
-strDir = 'images/';
-strDir1 = 'results/';
-files = dir([strDir '*.jpg']); % 获取文件夹中所有jpg文件
+strDir = 'C:\Users\ImageVisioner\Desktop\DeeplearningImageFusion_code_ver1105\small_result\IRSTD-1k\IRSTD1k_Img\';
+strDir1 = 'irstdikResult/';
+files = dir([strDir '*.png']); % 获取文件夹中所有jpg文件
 opt.dw = 50;
 opt.dh = 50;
 opt.x_step = 10;
