@@ -5,7 +5,7 @@ close all;
 %==========================================================================
 p = 0.6; % Change p here!
 %==========================================================================
-
+tic
 % Image directory
 img_dir = './images/';
 images = dir([img_dir '*.bmp']); % Get all .bmp images in the folder
@@ -53,6 +53,8 @@ for ii = 1:length(images)
     % Displaying progress
     fprintf('Processed image %d of %d: %s\n', ii, length(images), images(ii).name);
 end
-
+a=tic;
+avageTime=a/length(images);
+disp(avageTime)
 % Informing that the process is complete
 disp('All images have been processed.');
