@@ -6,7 +6,7 @@ close all;
 addpath('functions/')
 addpath('tools/')
 saveDir = 'results/';
-imgpath = 'C:\Users\ImageVisioner\Desktop\DeeplearningImageFusion_code_ver1105\small_result\IRSTD-1k\IRSTD1k_Img\';
+imgpath = 'C:\Users\ImageVisioner\Desktop\DeeplearningImageFusion_code_ver1105\small_result\sirst_aug\sirst_aug\test\images\';
 imgDir = dir([imgpath '*.png']);
 
 % patch parameters
