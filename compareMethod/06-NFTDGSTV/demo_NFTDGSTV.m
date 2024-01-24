@@ -7,8 +7,9 @@ close all;
 lambdaL =4;%
 C=5;%5
 L1=3;%L4 L
-saveDir= '..\NFTDGSTV公开\results\1\';     % save patch
-imgpath='..\NFTDGSTV公开\data\1\';      % Data input path
+mkdir results
+saveDir= '.\results\1\';     % save patch
+imgpath='.\data\1\';      % Data input path
 %%
 imgDir = dir([imgpath '*.bmp']);
 len = length(imgDir);
@@ -30,7 +31,7 @@ patch_frames=L1;% temporal slide parameter
 patch_num=n3/patch_frames;
 %% constrcut image tensor
 for l=1:patch_num
-    l
+  
     for i=1:patch_frames
         temp(:,:,i)=tenD(:,:,patch_frames*(l-1)+i);
     end           
